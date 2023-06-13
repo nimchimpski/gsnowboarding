@@ -1,0 +1,201 @@
+/* top menu bar */
+
+
+#navbox {
+    height: 2.5rem;
+    position: fixed;
+    display: flex;
+
+
+    justify-content: flex-end;
+    z-index: 20;
+    background-color: rgb(53, 120, 53);
+    width: 100%;
+    max-width: 800px;
+
+}
+
+/* navbar menu*/
+.navitem {
+    width: 100%;
+    transition: opacity 1s;
+}
+
+.navitem:hover {
+    opacity: .5;
+}
+
+.navitem>a {
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+    background-color: rgb(53, 120, 53);
+    display: block;
+    border: solid 1px rgb(240, 207, 38);
+    font-size: .9rem;
+    padding: .5rem;
+}
+
+#nav {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    top: 2.5rem;
+    width: 100%;
+    left: 0rem;
+    z-index: 5;
+}
+
+#nav.menu-open {
+    display: flex;
+}
+
+
+
+.nav>a:hover {
+    background-color: rgb(197, 66, 6);
+    color: rgb(255, 255, 255)
+}
+
+/* menu button */
+#menubutton {
+    position: absolute;
+    left: 1rem;
+    top: .3rem;
+    cursor: pointer;
+    opacity: .8;
+    z-index: 10;
+    caret-color: transparent;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 25px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 5px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+
+
+/* BUTTONS  BUTTONS  BUTTONS  BUTTONS  BUTTONS  BUTTONS  BUTTONS  BUTTONS  BUTTONS   */
+
+/* #topemailcontainer {
+    position:absolute;
+} */
+
+#topemailbox {
+    position: absolute;
+    display: none;
+    z-index: 30;
+}
+
+#topemail {
+    background-color: rgb(197, 66, 6);
+}
+
+.email {
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    transform: rotate(10deg);
+    background-color: rgb(197, 66, 6);
+    margin-right: 2rem;
+    margin-bottom: 6rem;
+    text-decoration: none;
+}
+
+
+#topemail:hover {
+    /* background-image: -webkit-linear-gradient(60deg,red,white);
+background-clip: text;
+color: transparent; */
+
+
+}
+
+#email:hover {}
+
+.email>a {
+    text-decoration: none;
+    color: white;
+}
+
+#navcall {
+
+    font-size: .7rem;
+    background-color: rgb(197, 66, 6);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    margin-top: 0rem;
+    min-width: 10rem;
+    padding: 0rem;
+    transform: skewX(0deg);
+    margin-bottom: 0rem;
+}
+
+#callbutton {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(197, 66, 6);
+    transform: skewX(-15deg);
+   
+}
+.fa-square-whatsapp {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    color: rgb(35, 255, 10);
+    height: 0rem;
+    left: .1rem;
+}
+
+.button {
+    margin-top: 0rem;
+    font-size: 1rem;
+    padding: 0rem;
+    padding-right: 5px;
+    border: none;
+    color: rgb(255, 255, 255);
+    transform: skewX(-15deg);
+    text-decoration: none;
+    transition: opacity .8s;
+    margin-bottom: 3rem;
+
+}
+
+.button:hover {
+    opacity: .7;
+
+}
+
+.navbutton {
+    margin-top: 0rem;
+    font-size: 1rem;
+    padding: 0rem;
+    padding-right: 5px;
+    border: none;
+    color: rgb(0, 0, 0);
+
+    text-decoration: none;
+
+}
+
+.button>a {
+    text-decoration: none;
+    color: white;
+}
+

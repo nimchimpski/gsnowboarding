@@ -1,0 +1,417 @@
+.root {
+    --yellow: #f0cf26;
+    --blue: #1e90ff;
+    --gold: rgba(213, 196, 7, 0.775) --tel2: +33 679 03 17 88;
+}
+
+body {
+    font-family: 'HELVETICA NEUE', sans-serif;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    background-color: rgb(0, 0, 0);
+    font-size: .9rem;
+    scrollbar-width: none;
+}
+
+/* -----MOBILE FIRST::GLOBAL USE + <650px WIDE----- */
+/* || classes */
+.fadein {
+    opacity: 0;
+    transition: opacity .3s ease;
+    
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0rem;
+    align-self: flex-start;
+
+}
+
+.subtitle {
+    position: relative;
+
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+
+
+}
+
+/* MOVE ID'd CONTENT TO MOVE TITLES!! */
+.content {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding-bottom: 0rem;
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.text {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.piccontainer {
+    position: relative;
+    width: 80%;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.mainpic {
+    height: 492;
+    width: 689;
+}
+
+.pic {}
+
+/* _________MAIN_______________ */
+
+#grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    max-width: 800px;
+}
+
+#mainpic {
+    z-index: 0;
+    grid-area: 1/1/2/2;
+    top: 1.8rem;
+    width: 100%;
+
+}
+
+/*1ST SECTION z1 TITLE ----------------------------1111111111111111----------  */
+#section1 {
+    grid-area: 2/1/3/2;
+    /* color: grey; */
+    z-index: 1;
+}
+
+#pagetitle {
+    font-size: 3rem;
+    transform: rotate(-8deg);
+    margin-top: -6rem;
+    color: rgb(240, 207, 38);
+    white-space: nowrap;
+}
+
+#pagesubtitle {
+    margin-top: 0rem;
+}
+
+#content1 {
+    margin-top: 4rem;
+
+}
+
+#title1 {
+    margin-top: 0rem;
+
+}
+
+#section1back {
+    grid-area: 2 / 1 /3 / 2;
+    background-color: rgb(255, 255, 255);
+    transform: skewY(-8deg);
+
+    padding-bottom: 20rem;
+    margin-top: -3rem;
+}
+
+
+#title1 {
+    position: relative;
+    color: rgba(213, 196, 7, 0.775);
+}
+
+
+#maintext {
+    margin-top: 2rem;
+    padding-bottom: 0rem;
+    color: grey
+}
+
+#text1 {
+    color: black;
+}
+
+.text1 {
+    color:black
+}
+
+#section1pic {
+
+    width: 100%;
+    height: auto;
+
+}
+
+#section1button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#contactbutton {
+
+
+    background-color: rgba(213, 196, 7, 0.775);
+
+    padding-left: 5px;
+
+}
+
+/*section2 z2   LESSONS   ---------------22222222222222222222222222222222222222222*/
+#section2lessons {
+    position: relative;
+    grid-area: 3/1/4/2;
+    margin-top: 0rem;
+    z-index: 2;
+
+}
+
+#section2back {
+    background-color: rgb(240, 207, 38);
+    clip-path: polygon(0% 0%, 100% 5rem, 100% 100%, 0 100%);
+    padding-bottom: 8rem;
+    width: 100%;
+
+
+}
+
+#content2 {
+    margin-top: 6rem;
+    
+}
+
+
+
+#title2 {
+    z-index: 0;
+}
+
+#lessontext {
+
+    /* grid-area: zone2; */
+    /* grid-column: 1/2; */
+}
+
+#lessonspic {
+    z-index: 10;
+    width: 100%;
+}
+
+#section2button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#lessonsbutton {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    background-color: rgb(53, 120, 53);
+    color: white;
+
+}
+
+/* -------splitboarding------------------------------ */
+#section3split {
+    position: relative;
+    grid-area: 4/1/5/2;
+    z-index: 3;
+    padding-bottom: 0rem;
+    margin-top: 0rem;
+
+
+}
+
+
+#section3back {
+    grid-area: 4/1/6/2;
+    clip-path: polygon(0% 8%, 100% 0%, 100% 100%, 0% 100%);
+    /* transform: skewY(-10deg); */
+    background-color: olivedrab;
+    margin-top: 3rem;
+    z-index: 0;
+    visibility: visible;
+    margin-left: 0rem;
+    border-left: 0rem;
+    padding-bottom: 0rem;
+
+
+
+
+}
+
+#content3 {
+    margin-top: 5rem;
+}
+
+#title3split {
+
+    z-index: 0;
+
+}
+
+
+
+#splitboardingtext {}
+
+
+#splitpic {
+    width: 100%;
+}
+
+/* --------------------------------------- */
+
+
+/* section4  z4  ME    ME    ME    ME    ME    ME    ME    ME    ME    ME    */
+
+#section4me {
+    position: relative;
+    grid-area: 5/1/6/2;
+    padding-top: 0rem;
+    margin-top: 0rem;
+    z-index: 4;
+    color: white;
+
+
+
+}
+
+#section4back {
+    position: absolute;
+    /* grid-area: 5/1/6/2; */
+    clip-path: polygon(0% 0, 100% 3%, 100% 100%, 0 100%);
+    background-image: linear-gradient(to bottom right, firebrick, rgb(180, 156, 35), rgb(180, 180, 35), rgb(53, 120, 53));
+    margin-top: 0rem;
+    padding-top: 0rem;
+
+
+}
+
+#section4back.hp {
+    padding-bottom: 0rem;
+
+}
+
+#content4 {
+    margin-top: 3rem;
+}
+
+#title4me {
+    z-index: 0;
+}
+
+#aboutmetext {}
+
+#mepic {
+    /* position: relative; */
+
+    width: 100%;
+    height: auto;
+
+}
+
+#section4button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#aboutmebutton {
+    position: relative;
+    z-index: 4;
+
+    background-color: rgb(216, 78, 24);
+    color: white;
+
+}
+
+
+
+
+
+/* section 5 contact  */
+
+
+
+
+#message {
+    position: relative;
+    /* display: none; */
+    background-color: rgb(197, 66, 6);
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(197, 66, 6);
+
+
+    border: none;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+#footer {
+    grid-area: 6/1/7/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    margin-top: 6rem;
+
+
+}
+
+
+
+#review {
+    grid-area: 4/1/5/2;
+    padding: 0rem 2rem 0rem 2rem;
+    margin-bottom: 2rem;
+    z-index: 0;
+
+}
+
+
+
+#oneclearshot {
+    display: flex;
+    justify-content: center;
+    font-size: .6REM;
+    z-index: 22;
+    padding-bottom: 0rem;
+}
+
+#oneclearshot>a {
+    text-decoration: none;
+    color: white;
+}

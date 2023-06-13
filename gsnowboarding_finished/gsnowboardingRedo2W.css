@@ -1,0 +1,334 @@
+/* WIDE     WIDE     WIDE     WIDE  */
+
+@media only screen and (min-width:650px) {
+
+    .subtitle {
+margin-top: 2rem;
+    }
+
+
+
+    #grid {
+        position: relative;
+        display: grid;
+        max-width: 800px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        /* grid-template-rows: repeat(3, minmax(20rem, auto)); */
+        ;
+
+
+        margin: 0px auto 0px auto;
+    }
+
+    /* .text {
+        top: -1.4rem;
+    } */
+
+
+    #mainpic {
+        grid-area: 1/1/2/3;
+        width: 100%;
+           
+        
+    }
+
+    #topemailbox {
+
+        display: flex;
+        top: 21 rem;
+        right: 4rem;
+
+
+    }
+
+   
+
+/* ------            || SECTION1   -------------*/
+    #section1 {
+
+        grid-area: 2/1/3/2;
+        margin-top: -8rem;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+
+    }
+  
+    #section1back {
+
+        grid-area: 2/1/3/3;
+        background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 50%, rgb(240, 207, 38) 25%, rgb(240, 207, 38) 75%);
+        
+        max-width: 800px;
+        padding-bottom: 25rem;
+    }
+   
+
+    #pagetitle {
+        font-size: 4rem;
+        margin-bottom: 0rem;
+        margin-top: -5.6rem;
+        margin-left: 2rem;
+      
+    }
+    
+    #pagesubtitle {
+        margin-top: 0rem;
+        margin-left: 0.5rem;
+        }
+   
+        #content1 {
+            margin-top: 2.5rem;
+        }
+
+    #title1 {
+        margin-top: 2rem;
+    }
+
+    #title1subtitle
+    {
+        margin-top: 2rem
+    }
+
+    
+   
+   
+
+
+    /* #titlepic {
+        width: 100%;
+    } */
+
+
+
+    /*  || LESSONS     LESSONS     LESSONS     LESSONS     LESSONS     LESSONS      */
+
+
+
+
+    #title2lessons {
+        color: white;
+    }
+
+    #section2lessons {
+        position: relative;
+        grid-area: 2/2/3/3;
+        color: white;
+       
+        z-index: 2;
+    }
+
+   
+
+  
+
+    #section2back {
+        display: none;
+    }
+
+    #content2 {
+        margin-top: -4rem;
+       
+        
+    }
+   
+
+
+
+    #lessonspic {
+        /* position: relative;
+        top: 0rem; */
+        width: 100%;
+
+    }
+
+    /* || splitboarding splitboarding splitboarding splitboarding splitboarding */
+    #section3split {
+        position: relative;
+
+        grid-area: 3/1 /4/3;
+        margin-top: 0rem;
+        z-index: 3;
+    }
+  
+  
+
+    #section3back {
+
+        grid-area: 3/1/4/3;
+
+        clip-path: polygon(0% 0%, 55% 5rem, 100% 0%, 100% 100%, 0% 100%);
+        background-image: linear-gradient(to bottom right, red, rgb(180, 156, 35), rgb(180, 180, 35), rgb(53, 120, 53));
+        max-width: 800px;
+
+        margin-top: 0rem;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        transform: none;
+
+    }
+  
+   
+    
+#content3 {
+    clip-path: none;
+}
+   
+  
+
+    #title3split {
+        position: relative;
+        color: white;
+        font-size: 20;
+
+    }
+
+    #splitpic {
+        position: relative;
+        width: 100%;
+
+    }
+
+    #splitbutton {
+        background-color: rgb(216, 78, 24);
+        color: white;
+    }
+
+    /*||  ME            ME     ME     ME     ME     ME     ME     ME     ME     ME         */
+    #mepic {
+
+
+        width: 100%;
+
+    }
+
+   
+  
+
+    #section4back {
+        display: none;
+
+    }
+
+    #content4 {
+        padding-top: 6rem;
+    }
+
+    #title4me {}
+
+
+    #aboutmetext {
+        color: white;
+    }
+
+    #aboutmebutton {
+        background-color: rgb(217, 204, 61);
+        color: black;
+    }
+
+
+
+    /* || footer    footer    footer    footer    footer    footer    footer    footer       */
+
+
+
+
+
+
+    #email {}
+
+    #email>a {}
+
+    #footer {
+        position: relative;
+        margin-top: 8rem;
+        grid-area: 4/1/5/2;
+        margin-bottom: 2rem;
+
+    }
+   
+   
+
+
+
+}
+
+@media only screen and (min-width:700px) {
+
+
+    #navbox {
+        height: 2.5rem;
+        display: flex;
+        flex-direction: row;
+
+
+        max-width: 800px;
+
+    }
+
+    #nav {
+
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        left: 0rem;
+        top: 0rem;
+    }
+
+    .navitem {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: rgb(197, 66, 6); */
+        /* margin: .5rem .5rem .5rem .5rem; */
+        padding-right: 0rem;
+
+
+
+    }
+
+    .navitem>a {
+        color: rgb(250, 250, 250);
+        font-size: .9rem;
+        text-decoration: none;
+        /* background-color: rgb(197, 66, 6); */
+        border: 0rem;
+        padding: 0rem;
+
+    }
+
+    #menubutton {
+        display: none;
+    }
+
+
+
+    .menuitem {}
+
+    #nav>a {
+
+
+
+        font-size: .8rem;
+
+
+        background-color: rgb(197, 66, 6);
+
+        border: 0px;
+
+
+
+    }
+}
+
+
+
+
+.Z {
+    background-color: olive;
+    background-color: olivedrab;
+    color: firebrick;
+    color: rgb(240, 207, 38);
+
+}
