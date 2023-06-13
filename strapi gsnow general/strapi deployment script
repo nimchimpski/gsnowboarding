@@ -1,0 +1,97 @@
+>>>>>>>>>>>> vps strapi fresh install and deploy <<<<<<<<<<<<<<
+ 
+// Upload new pub key.
+	ssh-copy-id -i /path/to/your/id_rsa.pub user@217.174.244.37
+// update fingerprint from server.delete old ones from local machine ssh file.
+
+	sudo apt update
+	sudo apt upgrade
+
+// node v18
+	curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+
+	sudo apt-get install -y nodejs
+
+	node -v
+	npm -v
+
+
+	npm install --production
+	npm I pm2 -g
+// is there a .env file already?
+	npm I dotenv
+	cp .env.example .env
+
+ 	sudo apt-get install -y mysql-server
+	npm install mysql --save
+// check config/database.js file mySQL not SQlite
+// check mysql/mysql.conf.d/mysqld.cnf 'BIND=0000'
+
+// problems here!!!!
+sudo mysql_secure_installation
+// nb. Keep 'localhost' for database.
+
+	ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'NkgpqL3FuzB*mz';
+
+	QUIT;
+// log in with new pw
+	mysql -u root -p
+//create new database
+	CREATE DATABASE strapi_db;
+	CREATE USER 'strapi_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'NkgpqL3FuzB*mz';
+	GRANT ALL PRIVILEGES ON strapi_db.* TO 'strapi_user'@'localhost';
+	FLUSH PRIVILEGES;
+	EXIT;
+// MOVE TO LOCALHOST - clone strapi to Vps 
+// (ASSUMES HOMEBREW+RSYNC INSTALLED LOCALLY
+	rsync -avz --exclude node_modules/ . root@217.174.244.37:/root/strapigsnow/
+// MOVE TO VPS STRAPI ROOT
+// edit transferred (development) .env file
+	Nano .env
+	{
+	HOST=localhost
+	DATABASE_CLIENT=mysql
+	DATABASE_NAME=strapi_db
+	DATABASE_HOST=localhost
+	DATABASE_PORT=3306
+	DATABASE_USERNAME=strapi_user
+	DATABASE_PASSWORD=your_strong_password
+	}
+// install dependencies + start prod server
+	npm install --omit=dev
+	npm run build
+
+// CHECK START SCRIPT IN PACKAGE.JSON. needs env=prod
+export NODE_ENV=production
+
+	npm start
+// check server firewall ports open
+// check all users in files = root
+// correct host=217.174.244.37
+
+
+
+>>>>port scanner GOOD! nmap
+
+#transfer files to vpsq
+rsync -avz /Users/alexwebb/Documents/CODING/Gsnowboarding/strapigsnowboarding/ root@217.174.244.37:/var/www/html/strapi/
+
+Main vps login:
+Ssh root@217.174.244.37
+%RrTtDjDi1_mYG*Cv1f8
+
+Mysql pw
+NkgpqL3FuzB*mz
+
+NDVdd+jsdhvc&7
+
+WWss33*jhdhd3(
+
+HHyy22++hjklXX
+
+
+
+/Users/alexwebb/Documents/CODING/Gsnowboarding/strapigsnowboarding
+
+
+
