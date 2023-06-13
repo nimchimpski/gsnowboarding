@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepagepic1s",
+  "info": {
+    "singularName": "homepagepic1",
+    "pluralName": "homepagepic1s",
+    "displayName": "homepagepic1",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pic1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

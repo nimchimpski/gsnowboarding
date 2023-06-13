@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepagetitle1s",
+  "info": {
+    "singularName": "homepagetitle1",
+    "pluralName": "homepagetitle1s",
+    "displayName": "homepagetitle1"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title1": {
+      "type": "string"
+    }
+  }
+}

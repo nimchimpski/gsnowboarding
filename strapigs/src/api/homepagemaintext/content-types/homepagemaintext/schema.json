@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepagemaintexts",
+  "info": {
+    "singularName": "homepagemaintext",
+    "pluralName": "homepagemaintexts",
+    "displayName": "homepagemaintext",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "maintext": {
+      "type": "richtext"
+    }
+  }
+}
