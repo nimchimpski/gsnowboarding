@@ -1,0 +1,99 @@
+server {
+    server_name nimchimpski.com www.nimchimpski.com;
+    root /var/www/server-index;
+    index index.html;
+    try_files $uri $uri/ =404;
+    location /ayou/ {
+        proxy_pass http://unix:/var/www/ayou/ayou.sock;
+        include proxy_params;
+    
+    location ~ /\.git {
+    deny all;
+    return 404;
+    }
+    }
+    location /static/ {
+        alias /var/www/ayou/staticfiles/;
+    }
+    location /nimchimpski_static/ {
+        alias /var/www/server-index/;
+    }
+    location /ttt/ {
+        proxy_pass http://127.0.0.1:5002;
+        proxy_set_header SCRIPT_NAME /ttt;
+        include proxy_params;
+    }
+    location /othello/ {
+        proxy_pass http://127.0.0.1:5003;
+        proxy_set_header SCRIPT_NAME /othello;
+        include proxy_params;
+    }
+    location /gsnowboarding {
+        root /var/www;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/nimchimpski.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/nimchimpski.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
+}
+
+server {
+    server_name gsnowboarding.com www.gsnowboarding.com;
+    root /var/www/gsnowboarding;
+    index index.html;
+    try_files $uri $uri/ =404;
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/gsnowboarding.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/gsnowboarding.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+    location ~ /\.git {
+    deny all;
+    return 404;
+}
+}
+
+
+server {
+    if ($host = www.gsnowboarding.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = gsnowboarding.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name gsnowboarding.com www.gsnowboarding.com;
+    return 404; # managed by Certbot
+
+
+
+
+}server {
+    if ($host = www.nimchimpski.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = nimchimpski.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name nimchimpski.com www.nimchimpski.com;
+    return 404; # managed by Certbot
+
+
+
+
+}
